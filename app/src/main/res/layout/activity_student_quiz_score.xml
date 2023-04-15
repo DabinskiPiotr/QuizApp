@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Bblue"
+        tools:context=".StudentQuizScore">
+
+        <TextView
+            android:id="@+id/TitleScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/carter_one"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/Congratulations"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitleScore" />
+
+        <TextView
+            android:id="@+id/scoreFraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/carter_one"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/Approx"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreFraction" />
+
+        <TextView
+            android:id="@+id/scorePercantage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/carter_one"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toTopOf="@+id/MainMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/MainMenu"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="137dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:fontFamily="@font/carter_one"
+            android:onClick="MainMenuScore"
+            android:text="@string/MainMenu"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/StudentMenu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/StrokesAndTexts"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/StudentMenu"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="150dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:fontFamily="@font/carter_one"
+            android:onClick="StudentMenuScore"
+            android:text="@string/AnotherQuiz"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/MainMenu"
+            app:strokeColor="@color/StrokesAndTexts"
+            app:strokeWidth="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

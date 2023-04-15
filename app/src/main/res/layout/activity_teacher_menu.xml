@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Bblue"
+        tools:context=".TeacherMenu">
+
+        <Button
+            android:id="@+id/MainMenuButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="137dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:fontFamily="@font/carter_one"
+            android:onClick="MainMenu"
+            android:text="@string/Back"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/AddNewQuizButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/StrokesAndTexts"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/AddNewQuizButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="137dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:fontFamily="@font/carter_one"
+            android:onClick="AddNewQuiz"
+            android:text="@string/AddNewQuiz"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MainMenuButton"
+            app:strokeColor="@color/StrokesAndTexts"
+            app:strokeWidth="4dp" />
+
+        <TextView
+            android:id="@+id/menuTitleTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/TeacherMenu"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/PopupAddQuiz"
+            android:layout_width="294dp"
+            android:layout_height="243dp"
+            android:background="@color/cardview_light_background"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#01608C"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29000002"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/NewQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/carter_one"
+                android:text="@string/NewQuiz"
+                android:textAlignment="center"
+                android:textColor="@color/StrokesAndTexts"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/CreateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="@color/buttonsRed"
+                android:onClick="CreateButton"
+                android:text="@string/CreateButton"
+                android:textColor="#ECC03B"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:strokeWidth="4dp" />
+
+            <Button
+                android:id="@+id/BackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="@color/buttonsRed"
+                android:onClick="backButton"
+                android:text="@string/Back"
+                android:textColor="#ECC03B"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:strokeWidth="4dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/NewQuizName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="@string/NewQuizName"
+                android:textAlignment="center"
+                android:textColor="@color/StrokesAndTexts"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/TeacherMenuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/AddNewQuizButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuTitleTeacher"
+            app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

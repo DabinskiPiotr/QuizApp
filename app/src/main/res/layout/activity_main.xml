@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Bblue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/menuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/carter_one"
+        android:text="@string/menuTitle"
+        android:textColor="@color/StrokesAndTexts"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTeacherMenu"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="234dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/buttons"
+        android:fontFamily="@font/carter_one"
+        android:onClick="TeacherButton"
+        android:text="@string/TeacherMenu"
+        android:textColor="#ECC03B"
+        android:textSize="34sp"
+        app:cornerRadius="30dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuTitle"
+        app:strokeColor="@color/StrokesAndTexts"
+        app:strokeWidth="4dp" />
+
+    <Button
+        android:id="@+id/buttonStudentMenu"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="234dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/buttons"
+        android:fontFamily="@font/carter_one"
+        android:onClick="StudentButton"
+        android:text="@string/StudentMenu"
+        android:textColor="#ECC03B"
+        android:textSize="34sp"
+        app:cornerRadius="30dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTeacherMenu"
+        app:strokeColor="@color/StrokesAndTexts"
+        app:strokeWidth="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

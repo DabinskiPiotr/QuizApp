@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Bblue"
+    tools:context=".Question">
+
+    <Button
+        android:id="@+id/ChangeQuestionButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/buttonsRed"
+        android:fontFamily="@font/carter_one"
+        android:onClick="ChangeQuestion"
+        android:text="@string/ChangeQuestion"
+        android:textColor="#ECC03B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/blue"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/QuestionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/carter_one"
+        android:textColor="@color/StrokesAndTexts"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/ChangeQuestionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/QuestionContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/carter_one"
+        android:textAlignment="center"
+        android:textColor="@color/StrokesAndTexts"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuestionId" />
+
+    <Button
+        android:id="@+id/BackButtonQuestionM"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="137dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/buttonsRed"
+        android:fontFamily="@font/carter_one"
+        android:onClick="BackButton"
+        android:text="@string/Back"
+        android:textColor="#ECC03B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AddNewAnswerButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/StrokesAndTexts"
+        app:strokeWidth="4dp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/AddNewAnswerButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="150dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/buttonsRed"
+        android:fontFamily="@font/carter_one"
+        android:onClick="AddNewAnswer"
+        android:text="@string/AddNewAnswer"
+        android:textColor="#ECC03B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/BackButtonQuestionM"
+        app:strokeColor="@color/StrokesAndTexts"
+        app:strokeWidth="4dp" />
+
+    <ImageButton
+
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFF452D"
+        android:contentDescription="@string/Back"
+        android:onClick="RemoveQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        app:tint="#ECC03B"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/PopupChangeQuestion"
+        android:layout_width="294dp"
+        android:layout_height="243dp"
+        android:background="@color/cardview_light_background"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#01608C"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29000002"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/NewQuestion"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/PopupChangQuestionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:onClick="ChangeQuestionPopupButton"
+            android:text="@string/ChangeButton"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:onClick="popupChangeBackButton"
+            android:text="@string/Back"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NewQuestionContentInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="@string/QuestionContent"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="30sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/PopupQuestionMenu"
+        android:layout_width="294dp"
+        android:layout_height="243dp"
+        android:background="@color/cardview_light_background"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#01608C"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29000002"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/NewAnswer"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/PopupCreateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:onClick="CreateNewAnswer"
+            android:text="@string/CreateButton"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeWidth="4dp" />
+
+        <Button
+            android:id="@+id/PopupBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:onClick="popupBackButton"
+            android:text="@string/Back"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NewAnswerContentInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="@string/NewAnswerHint"
+            android:textAlignment="center"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="30sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+
+        android:id="@+id/QuestionMenuLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/AddNewAnswerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuestionContent"
+        app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

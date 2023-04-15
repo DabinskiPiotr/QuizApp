@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AndroidAssignment</string>
+    <string name="menuTitle">Quiz App</string>
+    <string name="TeacherMenu">Teacher</string>
+    <string name="NewQuiz">New Quiz</string>
+    <string name="NewQuizName">New Quiz Name</string>
+    <string name="CreateButton">Create</string>
+    <string name="StudentMenu">Student</string>
+    <string name="Back">Back</string>
+    <string name="AddNewQuiz">Add new Quiz</string>
+    <string name="title_activity_teacher_menu">TeacherMenu</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="AddNewQuestion">Add new Question</string>
+    <string name="NewQuestionContent">New Question Name</string>
+    <string name="AddNewAnswer">Add new Answer</string>
+    <string name="NewAnswer">New Answer</string>
+    <string name="NewQuestion">New Question</string>
+    <string name="QuestionContent">NewQuestionContent</string>
+    <string name="Bin">Bin</string>
+    <string name="ChangeButton">Change</string>
+    <string name="NewAnswerHint">New Answer</string>
+    <string name="ChangeQuestion">Change Question</string>
+    <string name="ChangeAnswer">Change Answer</string>
+    <string name="SetTrueButton">Set True</string>
+    <string name="IsCorrect">IsCorrect</string>
+    <string name="Congratulations">Congratulations!\nYour score is:</string>
+    <string name="Approx">Which is:</string>
+    <string name="MainMenu">Main Menu</string>
+    <string name="AnotherQuiz">Another Quiz</string>
+</resources>

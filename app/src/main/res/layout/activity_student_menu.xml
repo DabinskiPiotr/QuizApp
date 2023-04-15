@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Bblue"
+        tools:context=".StudentMenu">
+
+        <TextView
+            android:id="@+id/menuTitleStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/carter_one"
+            android:text="@string/StudentMenu"
+            android:textColor="@color/StrokesAndTexts"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/mainMenuButton2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="137dp"
+            android:layout_height="103dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/buttonsRed"
+            android:fontFamily="@font/carter_one"
+            android:onClick="MainMenu"
+            android:text="@string/Back"
+            android:textColor="#ECC03B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/StrokesAndTexts"
+            app:strokeWidth="4dp" />
+
+        <LinearLayout
+            android:id="@+id/StudentMenuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/mainMenuButton2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuTitleStudent"
+            app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
